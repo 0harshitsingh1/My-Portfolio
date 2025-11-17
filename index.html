@@ -5,105 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Home</title>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Inter Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
+    <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body class="text-gray-100">
 
-    <!-- Header & Navigation -->
-    <!-- Header & Navigation -->
-<nav id="navbar" class="fixed top-0 w-full z-50 backdrop-blur-md bg-transparent/10 text-white p-4 transition-all duration-300">
-    <div class="container mx-auto flex justify-between items-center">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 backdrop-blur-md bg-transparent/10 text-white p-4 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center">
 
-        <!-- Logo -->
-        <a href="#home" class="text-2xl font-bold">HSthegreat</a>
+            <a href="#home" class="text-2xl font-bold">HSthegreat</a>
 
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden text-2xl">
-            <i class="fas fa-bars"></i>
-        </button>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
 
-        <!-- Desktop Menu -->
-        <ul class="hidden md:flex items-center space-x-10 text-lg font-medium">
-
-            <li><a href="#home" class="nav-link hover:text-red-400">Home</a></li>
-            <li><a href="#about" class="nav-link hover:text-red-400">About Me</a></li>
-            <li><a href="#work" class="nav-link hover:text-red-400">Work</a></li>
-            <li><a href="#skills" class="nav-link hover:text-red-400">Skills</a></li>
-            <li><a href="#projects" class="nav-link hover:text-red-400">Projects</a></li>
-
-            <!-- Contact Button -->
-            <li>
-                <a href="#contact" 
-                   class="bg-red-600 hover:bg-red-700 text-white py-1.5 px-5 rounded-lg shadow-md transition-all">
-                    Contact
-                </a>
-            </li>
-
-        </ul>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden mt-3 bg-black/40 backdrop-blur-md p-4 rounded-lg">
-        <ul class="flex flex-col space-y-4 text-lg">
-            <li><a href="#home" class="nav-link block py-2">Home</a></li>
-            <li><a href="#about" class="nav-link block py-2">About Me</a></li>
-            <li><a href="#work" class="nav-link block py-2">Work</a></li>
-            <li><a href="#skills" class="nav-link block py-2">Skills</a></li>
-            <li><a href="#projects" class="nav-link block py-2">Projects</a></li>
-
-            <!-- Contact Button for Mobile -->
-            <li>
-                <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white py-2 px-5 rounded-lg block text-center">
-                    Contact
-                </a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-    <!-- Hero Section -->
-    <header id="home" class="relative h-screen flex items-center text-white">
-        <!-- Background -->
-        <div class="absolute inset-0 z-0">
-            <img src="background.gif"
-                alt="Coding Background" class="w-full h-full object-cover opacity-30">
+            <ul class="hidden md:flex items-center space-x-10 text-lg font-medium">
+                <li><a href="#home" class="nav-link hover:text-red-400">Home</a></li>
+                <li><a href="#about" class="nav-link hover:text-red-400">About Me</a></li>
+                <li><a href="#work" class="nav-link hover:text-red-400">Work</a></li>
+                <li><a href="#skills" class="nav-link hover:text-red-400">Skills</a></li>
+                <li><a href="#projects" class="nav-link hover:text-red-400">Projects</a></li>
+                <li>
+                    <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white py-1.5 px-5 rounded-lg shadow-md">
+                        Contact
+                    </a>
+                </li>
+            </ul>
         </div>
 
-        <!-- Overlay Dark Gradient -->
-        <div class="absolute inset-0 bg-black/60 z-0"></div>
+        <div id="mobile-menu" class="hidden md:hidden mt-3 bg-black/40 backdrop-blur-md p-4 rounded-lg">
+            <ul class="flex flex-col space-y-4 text-lg">
+                <li><a href="#home" class="nav-link block py-2">Home</a></li>
+                <li><a href="#about" class="nav-link block py-2">About Me</a></li>
+                <li><a href="#work" class="nav-link block py-2">Work</a></li>
+                <li><a href="#skills" class="nav-link block py-2">Skills</a></li>
+                <li><a href="#projects" class="nav-link block py-2">Projects</a></li>
+                <li>
+                    <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white py-2 px-5 rounded-lg block text-center">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-        <!-- Hero Content -->
+    <!-- HERO SECTION -->
+    <header id="home" class="relative h-screen flex items-center text-white">
+        <img src="background.gif" class="absolute inset-0 w-full h-full object-cover opacity-30">
+
+        <div class="absolute inset-0 bg-black/60"></div>
+
         <div class="relative z-10 max-w-3xl pl-10 md:pl-24 lg:pl-40">
+            <h3 class="text-xl md:text-2xl mb-4">Hello, my name is</h3>
 
-            <h3 class="text-xl md:text-2xl mb-4 opacity-90">
-                Hello, my name is
-            </h3>
+            <h1 class="font-bold leading-tight text-5xl md:text-7xl mb-4">Harshit Singh</h1>
 
-            <h1 class="font-bold leading-tight text-5xl md:text-7xl mb-4">
-                Harshit Singh
-            </h1>
-
-            <h2 class="text-2xl md:text-4xl font-medium mb-10">
-                And I'm a
-                <span id="typed" class="text-blue-400 font-semibold"></span>
-            </h2>
-
-            <a href="#contact"
-                class="bg-red-500 hover:bg-red-600 transition text-white px-10 py-4 rounded-lg text-lg font-semibold shadow-lg">
+           <h2 class="text-2xl md:text-4xl font-medium mb-10 flex items-center gap-2">
+    <span>And I'm a</span>
+    <span id="typed" class="inline-block text-red-500 font-bold min-w-[10px]"></span>
+</h2>
+            <a href="#contact" class="bg-red-500 hover:bg-red-600 text-white px-10 py-4 rounded-lg text-lg font-semibold shadow-lg">
                 Contact Me
             </a>
         </div>
@@ -401,7 +376,7 @@
     </a>
 
 
-    <link rel="stylesheet" href="script.js">
+    <script src="script.js"></script>
 
 </body>
 
