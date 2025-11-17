@@ -1,0 +1,167 @@
+/* Custom Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111827;
+    /* bg-gray-900 */
+    color: #f3f4f6;
+    /* text-gray-100 */
+}
+
+/* Custom red color from the image */
+:root {
+    --brand-red: #DC2626;
+    /* red-600 */
+    --brand-red-darker: #B91C1C;
+    /* red-700 */
+}
+
+.text-brand-red {
+    color: var(--brand-red);
+}
+
+.bg-brand-red {
+    background-color: var(--brand-red);
+}
+
+.hover\:bg-brand-red-darker:hover {
+    background-color: var(--brand-red-darker);
+}
+
+.border-brand-red {
+    border-color: var(--brand-red);
+}
+
+/* Active Nav Link Styling */
+.nav-link.active {
+    color: var(--brand-red);
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    .nav-link.active {
+        color: #ffffff;
+        background-color: var(--brand-red);
+        border-radius: 0.375rem;
+        /* rounded-md */
+        padding-left: 0.75rem;
+        /* px-3 */
+        padding-right: 0.75rem;
+        /* px-3 */
+        padding-top: 0.25rem;
+        /* py-1 */
+        padding-bottom: 0.25rem;
+        /* py-1 */
+    }
+}
+
+
+/* Typing Effect */
+.typing-container {
+    display: inline-block;
+}
+
+/* .typed-text {
+    display: inline;
+    border-right: 0.15em solid var(--brand-red);
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    animation:
+        typing 3.5s steps(30, end) infinite,
+        blink-caret .75s step-end infinite;
+} */
+
+/* The typing effect */
+@keyframes typing {
+    0% {
+        width: 0
+    }
+
+    40% {
+        width: 100%
+    }
+
+    60% {
+        width: 100%
+    }
+
+    90% {
+        width: 0
+    }
+
+    100% {
+        width: 0
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--brand-red);
+    }
+}
+
+/* Skills Bar Animation */
+.skill-bar-inner {
+    transform: translateX(-100%);
+    animation: fillBar 1.5s ease-out forwards;
+}
+
+@keyframes fillBar {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Add delays for each bar */
+.skill-bar-inner:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-bar-inner:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-bar-inner:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skill-bar-inner:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.skill-bar-inner:nth-child(5) {
+    animation-delay: 0.5s;
+}
+#home h1 {
+    letter-spacing: 1px;
+}
+
+#home h3 {
+    font-weight: 300;
+}
+
+#home h2 span {
+    font-weight: 600;
+}
+/* blinking caret for typed text */
+.typed-with-caret::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 6px;
+  opacity: 1;
+  animation: blink 0.8s steps(1) infinite;
+  color: var(--brand-red);
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}

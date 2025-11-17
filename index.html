@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Home</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="text-gray-100">
+
+    <!-- Header & Navigation -->
+    <!-- Header & Navigation -->
+<nav id="navbar" class="fixed top-0 w-full z-50 backdrop-blur-md bg-transparent/10 text-white p-4 transition-all duration-300">
+    <div class="container mx-auto flex justify-between items-center">
+
+        <!-- Logo -->
+        <a href="#home" class="text-2xl font-bold">HSthegreat</a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex items-center space-x-10 text-lg font-medium">
+
+            <li><a href="#home" class="nav-link hover:text-red-400">Home</a></li>
+            <li><a href="#about" class="nav-link hover:text-red-400">About Me</a></li>
+            <li><a href="#work" class="nav-link hover:text-red-400">Work</a></li>
+            <li><a href="#skills" class="nav-link hover:text-red-400">Skills</a></li>
+            <li><a href="#projects" class="nav-link hover:text-red-400">Projects</a></li>
+
+            <!-- Contact Button -->
+            <li>
+                <a href="#contact" 
+                   class="bg-red-600 hover:bg-red-700 text-white py-1.5 px-5 rounded-lg shadow-md transition-all">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-3 bg-black/40 backdrop-blur-md p-4 rounded-lg">
+        <ul class="flex flex-col space-y-4 text-lg">
+            <li><a href="#home" class="nav-link block py-2">Home</a></li>
+            <li><a href="#about" class="nav-link block py-2">About Me</a></li>
+            <li><a href="#work" class="nav-link block py-2">Work</a></li>
+            <li><a href="#skills" class="nav-link block py-2">Skills</a></li>
+            <li><a href="#projects" class="nav-link block py-2">Projects</a></li>
+
+            <!-- Contact Button for Mobile -->
+            <li>
+                <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white py-2 px-5 rounded-lg block text-center">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative h-screen flex items-center text-white">
+        <!-- Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="background.gif"
+                alt="Coding Background" class="w-full h-full object-cover opacity-30">
+        </div>
+
+        <!-- Overlay Dark Gradient -->
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-3xl pl-10 md:pl-24 lg:pl-40">
+
+            <h3 class="text-xl md:text-2xl mb-4 opacity-90">
+                Hello, my name is
+            </h3>
+
+            <h1 class="font-bold leading-tight text-5xl md:text-7xl mb-4">
+                Harshit Singh
+            </h1>
+
+            <h2 class="text-2xl md:text-4xl font-medium mb-10">
+                And I'm a
+                <span id="typed" class="text-blue-400 font-semibold"></span>
+            </h2>
+
+            <a href="#contact"
+                class="bg-red-500 hover:bg-red-600 transition text-white px-10 py-4 rounded-lg text-lg font-semibold shadow-lg">
+                Contact Me
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Me Section -->
+        <section id="about" class="py-20 md:py-32 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-4">About me</h2>
+                <div class="text-center mb-12">
+                    <span class="text-lg text-gray-400">who I am</span>
+                    <div class="w-20 h-0.5 bg-brand-red mx-auto mt-2"></div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-12 mt-10">
+    
+    <!-- TEXT LEFT -->
+    <div class="md:w-2/3 text-left">
+        <h3 class="text-3xl font-semibold mb-6">
+            I'm Harshit Singh and I'm a <span class="text-brand-red">Java Developer</span>
+        </h3>
+
+        <p class="text-lg text-gray-300 leading-relaxed mb-4">
+            I'm Harshit Singh — a Java developer and 3rd-year Computer Science engineering student who loves building clean, impactful tech. From backend development and problem-solving to creating interactive web projects, I enjoy turning ideas into solid, working systems. I'm steadily growing my skills, refining my communication, and shaping a portfolio that reflects my journey.
+        </p>
+
+        <p class="text-lg text-gray-300 leading-relaxed mb-8">
+            I'm also exploring human values, ethics, and how technology can align with what truly matters. With a mix of traditional grounding and forward-thinking energy, I aim to build software that is both reliable and meaningful.🚀
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+            <a href="https://github.com/0harshitsingh1"
+               class="bg-brand-red text-white py-3 px-6 rounded-lg text-md font-semibold hover:bg-brand-red-darker transition-colors duration-300">
+               Visit Github
+            </a>
+
+            <a href="https://www.linkedin.com/in/harshit-singh03/"
+               class="bg-gray-700 text-white py-3 px-6 rounded-lg text-md font-semibold hover:bg-gray-600 transition-colors duration-300">
+               LinkedIn
+            </a>
+        </div>
+    </div>
+
+    <!-- IMAGE RIGHT -->
+    <div class="md:w-1/3 flex-shrink-0 flex justify-center md:justify-end">
+        <div class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl mx-auto">
+    <img src="myimage.JPG"
+         alt="Harshit Singh"
+         class="w-full h-full object-cover">
+</div>
+    </div>
+
+</div>
+            </div>
+        </section>
+
+        <!-- My Work Section -->
+        <section id="work" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-4">My Work</h2>
+                <div class="text-center mb-12">
+                    <span class="text-lg text-gray-400">what I did</span>
+                    <div class="w-20 h-0.5 bg-brand-red mx-auto mt-2"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- GitHub Card -->
+                    <a href="https://github.com/0harshitsingh1"
+                        class="block bg-gray-800 p-10 rounded-lg text-center group transition-transform duration-300 hover:scale-105 shadow-xl">
+                        <i
+                            class="fab fa-github text-7xl mb-6 text-brand-red transition-transform duration-300 group-hover:scale-110"></i>
+                        <h3 class="text-3xl font-semibold mb-2">My GitHub</h3>
+                        <p class="text-lg text-gray-400 group-hover:text-white transition-colors">click me</p>
+                    </a>
+
+                    <!-- LinkedIn Card -->
+                    <a href="https://www.linkedin.com/in/harshit-singh03/"
+                        class="block bg-gray-800 p-10 rounded-lg text-center group transition-transform duration-300 hover:scale-105 shadow-xl">
+                        <i
+                            class="fab fa-linkedin text-7xl mb-6 text-brand-red transition-transform duration-300 group-hover:scale-110"></i>
+                        <h3 class="text-3xl font-semibold mb-2">My LinkedIn</h3>
+                        <p class="text-lg text-gray-400 group-hover:text-white transition-colors">click me</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Skills Section -->
+        <section id="skills" class="py-20 md:py-32 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-4">My skills</h2>
+                <div class="text-center mb-12">
+                    <span class="text-lg text-gray-400">what I know</span>
+                    <div class="w-20 h-0.5 bg-brand-red mx-auto mt-2"></div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-12">
+                    <!-- Text Content -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-3xl font-semibold mb-6">My creative skills & experiences.</h3>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                            I have a strong foundation in software development, working with HTML, CSS, JavaScript, and crafting clean, practical web experiences. On the backend, I’m comfortable with Java, databases and building systems that actually hold up under real use. I’ve also contributed to meaningful projects like ClasSync, which focuses on student academic activities, and I enjoy exploring the full stack whenever a project calls for it.
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                            I’m always pushing myself to grow — staying curious, leveling up my skills, and taking on challenges that keep me disciplined. I practice DSA regularly to sharpen my logic and problem-solving. Each project is a chance to outdo my past work and build with real intent and ambition.  🚀
+                        </p>
+                        <a href="#"
+                            class="bg-brand-red text-white py-3 px-6 rounded-lg text-md font-semibold hover:bg-brand-red-darker transition-colors duration-300">
+                            Read more
+                        </a>
+                    </div>
+                    <!-- Skills Bars -->
+                    <div class="md:w-1/2">
+                        <div class="space-y-6">
+                            <!-- Skill 1 -->
+                            <div class="skill-group">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-lg font-medium">HTML</span>
+                                    <span class="text-lg font-medium">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar-inner bg-brand-red h-3 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 2 -->
+                            <div class="skill-group">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-lg font-medium">CSS</span>
+                                    <span class="text-lg font-medium">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar-inner bg-brand-red h-3 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 3 -->
+                            <div class="skill-group">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-lg font-medium">JavaScript</span>
+                                    <span class="text-lg font-medium">40%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar-inner bg-brand-red h-3 rounded-full" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 4 -->
+                            <div class="skill-group">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-lg font-medium">Java</span>
+                                    <span class="text-lg font-medium">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar-inner bg-brand-red h-3 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 5 -->
+                            <div class="skill-group">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-lg font-medium">DSA</span>
+                                    <span class="text-lg font-medium">50%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                    <div class="skill-bar-inner bg-brand-red h-3 rounded-full" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Placeholder) -->
+    <section id="projects" class="py-20 md:py-32 bg-gray-800">
+    <div class="container mx-auto px-6">
+        
+        <!-- Matching Skills Style -->
+        <h2 class="text-4xl font-bold text-center mb-4">Projects</h2>
+        <div class="text-center mb-12">
+            <span class="text-lg text-gray-400">what I've built</span>
+            <div class="w-20 h-0.5 bg-brand-red mx-auto mt-2"></div>
+        </div>
+
+        <!-- Your project cards go here -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            <a href="https://the-classync.vercel.app/index.html" class="block bg-gray-900 p-10 rounded-lg text-center group transition-transform duration-300 hover:scale-105 shadow-xl">
+                <i class="fas fa-code text-7xl mb-6 text-brand-red transition-transform duration-300 group-hover:scale-110"></i>
+                <h3 class="text-3xl font-semibold mb-2">A Smarter Way To Manage  Student Tasks And Academics
+</h3>
+                <p class="text-lg text-gray-400 group-hover:text-white transition-colors">Click to view</p>
+            </a>
+
+            <a href="https://github.com/0harshitsingh1/Smart-StudyMate-AI" class="block bg-gray-900 p-10 rounded-lg text-center group transition-transform duration-300 hover:scale-105 shadow-xl">
+                <i class="fas fa-code-branch text-7xl mb-6 text-brand-red transition-transform duration-300 group-hover:scale-110"></i>
+                <h3 class="text-3xl font-semibold mb-2">Smart StudyMate AI is an all-in-one web app that summarizes text, extracts keywords, and generates quizzes and audio to help students study more efficiently.</h3>
+                <p class="text-lg text-gray-400 group-hover:text-white transition-colors">Click to view</p>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-4">Contact me</h2>
+                <div class="text-center mb-12">
+                    <span class="text-lg text-gray-400">get in touch</span>
+                    <div class="w-20 h-0.5 bg-brand-red mx-auto mt-2"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-3xl font-semibold mb-6">Get in Touch</h3>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                            Contact me and ask your queries!!
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-user text-brand-red text-2xl"></i>
+                                <div>
+                                    <h4 class="text-xl font-semibold">Name</h4>
+                                    <p class="text-lg text-gray-300">Harshit Singh</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-map-marker-alt text-brand-red text-2xl"></i>
+                                <div>
+                                    <h4 class="text-xl font-semibold">Address</h4>
+                                    <p class="text-lg text-gray-300">Bangalore, India</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-envelope text-brand-red text-2xl"></i>
+                                <div>
+                                    <h4 class="text-xl font-semibold">Email</h4>
+                                    <p class="text-lg text-gray-300">harshitsingh.vtu@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div>
+                        <h3 class="text-3xl font-semibold mb-6">Message me</h3>
+                        <form action="#" method="POST">
+                            <div class="flex flex-col md:flex-row gap-4 mb-4">
+                                <input type="text" name="name" placeholder="Name" required
+                                    class="w-full md:w-1/2 p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-brand-red">
+                                <input type="email" name="email" placeholder="Email" required
+                                    class="w-full md:w-1/2 p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-brand-red">
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" name="subject" placeholder="Subject" required
+                                    class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-brand-red">
+                            </div>
+                            <div class="mb-6">
+                                <textarea name="message" placeholder="Message.." rows="6" required
+                                    class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-brand-red"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit"
+                                    class="bg-brand-red text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-brand-red-darker transition-colors duration-300">
+                                    Send
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Page View Counter -->
+                <div class="text-center mt-20">
+                    <p class="text-lg text-gray-400 mb-2">This page was viewed</p>
+                    <div class="text-7xl font-bold text-brand-red mb-2">0</div>
+                    <p class="text-lg text-gray-400">times</p>
+                    <p class="text-sm text-gray-500 mt-4">(This is a static demo counter)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-8 text-center">
+        <div class="container mx-auto">
+            Created By <a href="#" class="text-brand-red hover:underline">avpthegreat</a> | © 2020 All rights reserved.
+            Visit Github for Projects.
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" id="to-top-btn"
+        class="fixed bottom-6 right-6 bg-brand-red text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-brand-red-darker transition-all duration-300 opacity-0 scale-0">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+    <link rel="stylesheet" href="script.js">
+
+</body>
+
+</html>
