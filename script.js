@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!typedEl) return;
 
   const words = [
-    "Web Developer",
-    "Java Developer",
-    "Coder",
-    "Problem Solver",
-    "Tech Enthusiast"
+    "Web Developer!",
+    "Java Developer!",
+    "Coder!",
+    "Problem Solver!",
+    "Tech Enthusiast!"
   ];
 
   let wordIndex = 0;
