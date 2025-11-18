@@ -7,8 +7,20 @@
     <title>Portfolio | Home</title>
 
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
+<script>
+    // If CDN fails, load Tailwind from backup
+    (function() {
+        var script = document.createElement("script");
+        script.src = "https://cdn.tailwindcss.com";
+        script.onerror = function() {
+            console.warn("Tailwind CDN blocked — loading fallback…");
+            document.head.insertAdjacentHTML('beforeend', `
+                <link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+            `);
+        };
+        document.head.appendChild(script);
+    })();
+</script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer">
