@@ -1,3 +1,6 @@
+// ------------------------------
+// Typing Animation
+// ------------------------------
 document.addEventListener("DOMContentLoaded", () => {
 
   const typedEl = document.getElementById("typed");
@@ -44,13 +47,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   typeLoop();
-
 });
-document.getElementById("contact-form").addEventListener("submit", async function(e) {
+
+
+// ------------------------------
+// Contact Form Submission
+// ------------------------------
+document.getElementById("contact-form").addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const form = e.target;
     const formData = new FormData(form);
+    const successMsg = document.getElementById("success-message");
 
     const res = await fetch(form.action, {
         method: "POST",
@@ -59,9 +67,19 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     });
 
     if (res.ok) {
-        alert("Thank you! Your message has been sent successfully.");
+
+        // Show success message
+        successMsg.classList.remove("hidden");
+
+        // Reset form
         form.reset();
+
+        // Auto-hide after 10 seconds
+        setTimeout(() => {
+            successMsg.classList.add("hidden");
+        }, 10000);
+
     } else {
-        alert("Oops, something went wrong. Try again.");
+        alert("Oops! Something went wrong. Please try again.");
     }
 });

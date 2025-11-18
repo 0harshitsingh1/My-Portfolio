@@ -120,12 +120,13 @@
                         </p>
 
                         <div class="flex flex-wrap gap-4">
-                            <a href="https://github.com/0harshitsingh1"
+                            <a href="https://github.com/0harshitsingh1" target="_blank" rel="noopener noreferrer"
                                 class="bg-brand-red text-white py-3 px-6 rounded-lg text-md font-semibold hover:bg-brand-red-darker transition-colors duration-300">
                                 Visit Github
                             </a>
 
-                            <a href="https://www.linkedin.com/in/harshit-singh03/"
+                            <a href="https://www.linkedin.com/in/harshit-singh03/" target="_blank"
+                                rel="noopener noreferrer"
                                 class="bg-gray-700 text-white py-3 px-6 rounded-lg text-md font-semibold hover:bg-gray-600 transition-colors duration-300">
                                 LinkedIn
                             </a>
@@ -153,9 +154,11 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
                     <!-- GitHub Card -->
-                    <a href="https://github.com/0harshitsingh1"
+                    <a href="https://github.com/0harshitsingh1" target="_blank" rel="noopener noreferrer"
                         class="block bg-gray-800 p-10 rounded-lg text-center group transition-transform duration-300 hover:scale-105 shadow-xl">
+
                         <i
                             class="fab fa-github text-7xl mb-6 text-brand-red transition-transform duration-300 group-hover:scale-110"></i>
                         <h3 class="text-3xl font-semibold mb-2">My GitHub</h3>
@@ -163,10 +166,9 @@
                     </a>
 
                     <!-- LeetCode Card -->
-                    <a href="https://leetcode.com/0harshitsingh1/"
+                    <a href="https://leetcode.com/0harshitsingh1/" target="_blank" rel="noopener noreferrer"
                         class="block bg-gray-800 p-10 rounded-lg text-center group transition-transform duration-300 hover:scale-105 shadow-xl">
 
-                        <!-- LeetCode SVG Icon -->
                         <svg class="mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" width="90"
                             height="90" viewBox="0 0 24 24" fill="none">
                             <path d="M9.46 3.04L7.75 4.75L12.97 10L7.75 15.25L9.46 16.96L16.41 10L9.46 3.04Z"
@@ -180,11 +182,12 @@
                         <p class="text-lg text-gray-400 group-hover:text-white transition-colors">
                             click me
                         </p>
+
                     </a>
+
                 </div>
             </div>
         </section>
-
         <!-- My Skills Section -->
         <section id="skills" class="py-20 md:py-32 bg-gray-800">
             <div class="container mx-auto px-6">
@@ -289,16 +292,16 @@
                 <!-- Your project cards go here -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-                    <a href="https://the-classync.vercel.app/index.html"
+                    <a href="https://the-classync.vercel.app/index.html" target="_blank" rel="noopener noreferrer"
                         class="block bg-gray-900 p-10 rounded-lg text-center group transition-transform duration-300 hover:scale-105 shadow-xl">
                         <i
                             class="fas fa-code text-7xl mb-6 text-brand-red transition-transform duration-300 group-hover:scale-110"></i>
-                        <h3 class="text-3xl font-semibold mb-2">A Smarter Way To Manage Student Tasks And Academics
-                        </h3>
+                        <h3 class="text-3xl font-semibold mb-2">A Smarter Way To Manage Student Tasks And Academics</h3>
                         <p class="text-lg text-gray-400 group-hover:text-white transition-colors">Click to view</p>
                     </a>
 
-                    <a href="https://github.com/0harshitsingh1/Smart-StudyMate-AI"
+                    <a href="https://github.com/0harshitsingh1/Smart-StudyMate-AI" target="_blank"
+                        rel="noopener noreferrer"
                         class="block bg-gray-900 p-10 rounded-lg text-center group transition-transform duration-300 hover:scale-105 shadow-xl">
                         <i
                             class="fas fa-code-branch text-7xl mb-6 text-brand-red transition-transform duration-300 group-hover:scale-110"></i>
@@ -347,7 +350,9 @@
                                 <i class="fas fa-envelope text-brand-red text-2xl"></i>
                                 <div>
                                     <h4 class="text-xl font-semibold">Email</h4>
-                                    <p class="text-lg text-gray-300">harshitsingh.vtu@gmail.com</p>
+                                    <p class="text-lg text-gray-300"><a href="mailto:harshitsingh.vtu@gmail.com"
+                                            class="text-gray-300 hover:text-blue-400 transition-colors duration-300">harshitsingh.vtu@gmail.com</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -359,8 +364,6 @@
 
                         <!-- NETLIFY FORM ENABLED -->
                         <form action="https://formspree.io/f/xqankqbr" method="POST" id="contact-form">
-                            <!-- Optional: Redirect after success -->
-                            <input type="hidden" name="_redirect" value="https://your-site-link.com/thank-you.html">
 
                             <div class="flex flex-col md:flex-row gap-4 mb-4">
                                 <input type="text" name="name" placeholder="Name" required
@@ -386,6 +389,12 @@
                                     Send
                                 </button>
                             </div>
+
+                            <!-- SUCCESS MESSAGE -->
+                            <p id="success-message" class="text-green-400 mt-4 text-lg font-medium hidden">
+                                Thanks for your message. I'll get back to you soon.
+                            </p>
+
                         </form>
                     </div>
                     <!-- Page View Counter -->
@@ -402,7 +411,7 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-gray-400 py-8 text-center">
         <div class="container mx-auto">
-            Created By <a href="#" class="text-brand-red hover:underline">HSthegreat</a> | © 2025 All rights reserved.
+            Created By <a href="#" class="text-brand-red hover:underline">HSthegreat</a> | ©️ 2025 All rights reserved.
             Visit Github for Projects.
         </div>
     </footer>
