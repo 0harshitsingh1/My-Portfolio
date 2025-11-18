@@ -83,3 +83,16 @@ document.getElementById("contact-form").addEventListener("submit", async functio
         alert("Oops! Something went wrong. Please try again.");
     }
 });
+// -------------------------------------
+// Reveal on Scroll Animation
+// -------------------------------------
+const reveals = document.querySelectorAll(".reveal");
+
+// Smooth Reveal with Premium Timing
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+        }
+    });
+}, { threshold: 0.25 }); // start animation earlier, smoother
