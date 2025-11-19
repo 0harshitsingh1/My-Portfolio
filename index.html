@@ -8,28 +8,29 @@
 
     <!-- FIXED: Tailwind CSS -->
     <script>
-    // If CDN fails, load Tailwind from backup
-    (function() {
-        var script = document.createElement("script");
-        script.src = "https://cdn.tailwindcss.com";
-        script.onerror = function() {
-            console.warn("Tailwind CDN blocked — loading fallback…");
-            document.head.insertAdjacentHTML('beforeend', `
+        // If CDN fails, load Tailwind from backup
+        (function () {
+            var script = document.createElement("script");
+            script.src = "https://cdn.tailwindcss.com";
+            script.onerror = function () {
+                console.warn("Tailwind CDN blocked — loading fallback…");
+                document.head.insertAdjacentHTML('beforeend', `
                 <link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
             `);
-        };
-        document.head.appendChild(script);
-    })();
-</script>
+            };
+            document.head.appendChild(script);
+        })();
+    </script>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous">
 
     <!-- Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- AOS (Animate On Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
@@ -58,8 +59,7 @@
                 <li><a href="#skills" class="nav-link hover:text-red-400">Skills</a></li>
                 <li><a href="#projects" class="nav-link hover:text-red-400">Projects</a></li>
                 <li>
-                    <a href="#contact"
-                       class="bg-red-600 hover:bg-red-700 text-white py-1.5 px-5 rounded-lg shadow-md">
+                    <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white py-1.5 px-5 rounded-lg shadow-md">
                         Contact
                     </a>
                 </li>
@@ -67,8 +67,7 @@
         </div>
 
         <!-- MOBILE MENU -->
-        <div id="mobile-menu"
-             class="hidden md:hidden mt-3 bg-black/60 backdrop-blur-md p-4 rounded-lg">
+        <div id="mobile-menu" class="hidden md:hidden mt-3 bg-black/60 backdrop-blur-md p-4 rounded-lg">
             <ul class="flex flex-col space-y-4 text-lg">
                 <li><a href="#home" class="nav-link block py-2">Home</a></li>
                 <li><a href="#about" class="nav-link block py-2">About Me</a></li>
@@ -77,8 +76,8 @@
                 <li><a href="#projects" class="nav-link block py-2">Projects</a></li>
                 <li>
                     <a href="#contact"
-                       class="bg-red-600 hover:bg-red-700 text-white py-2 px-5 rounded-lg block text-center">
-                       Contact
+                        class="bg-red-600 hover:bg-red-700 text-white py-2 px-5 rounded-lg block text-center">
+                        Contact
                     </a>
                 </li>
             </ul>
@@ -87,8 +86,7 @@
 
     <!-- HERO SECTION -->
     <header id="home" class="relative h-screen flex items-center text-white">
-        <img src="background.gif"
-             class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <img src="background.gif" class="absolute inset-0 w-full h-full object-cover opacity-30">
 
         <div class="absolute inset-0 bg-black/60"></div>
 
@@ -105,7 +103,7 @@
             </h2>
 
             <a href="#contact"
-               class="bg-red-500 hover:bg-red-600 text-white px-10 py-4 rounded-lg text-lg font-semibold shadow-lg">
+                class="bg-red-500 hover:bg-red-600 text-white px-10 py-4 rounded-lg text-lg font-semibold shadow-lg">
                 Contact Me
             </a>
         </div>
@@ -114,92 +112,94 @@
     <main>
 
         <!-- ABOUT -->
-        <section id="about" class="py-20 md:py-32 bg-gray-800">
-            <div class="container mx-auto px-6">
+        <!-- About Me Section -->
+<section id="about" class="min-h-screen flex items-center py-20 md:py-32 bg-gray-900 reveal">
+    <div class="container mx-auto px-6">
 
-                <h2 class="text-4xl font-bold text-center mb-4">About me</h2>
-                <div class="text-center mb-12">
-                    <span class="text-lg text-gray-400">who I am</span>
-                    <div class="w-20 h-0.5 bg-brand-red mx-auto mt-2"></div>
+        <h2 class="text-4xl font-bold text-center mb-4 fade-text title" data-aos="zoom-in-down">About me</h2>
+
+        <div class="text-center mb-12 fade-text">
+            <span class="text-lg text-gray-400">who I am</span>
+            <div class="w-20 h-0.5 bg-brand-red mx-auto mt-2"></div>
+        </div>
+
+        <!-- CONTENT ROW -->
+        <div class="flex flex-col md:flex-row items-center md:items-center justify-between gap-16">
+
+            <!-- LEFT TEXT -->
+            <div class="md:w-1/2 text-left" data-aos="zoom-in-down">
+
+                <h3 class="text-3xl md:text-4xl font-semibold mb-6 fade-text">
+                    I'm Harshit Singh and I'm a <span class="text-brand-red">Java Developer</span>
+                </h3>
+
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-4 fade-text">
+                    I'm Harshit Singh — a Java developer and 3rd-year Computer Science engineering student who
+                    loves building clean, impactful tech. From backend development and problem-solving to creating
+                    interactive web projects, I enjoy turning ideas into solid, working systems.
+                </p>
+
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 fade-text">
+                    I'm also exploring human values, ethics, and how technology can align with what truly matters.
+                    With a mix of traditional grounding and forward-thinking energy, I aim to build
+                    software that is both reliable and meaningful. 🚀
+                </p>
+
+                <div class="flex flex-wrap gap-4 fade-text">
+                    <a href="https://github.com/0harshitsingh1" target="_blank"
+                       class="bg-brand-red text-white py-3 px-6 rounded-lg text-md font-semibold hover:bg-brand-red-darker transition-colors duration-300">
+                        Visit Github
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/harshit-singh03/" target="_blank"
+                       class="bg-gray-700 text-white py-3 px-6 rounded-lg text-md font-semibold hover:bg-gray-600 transition-colors duration-300">
+                        LinkedIn
+                    </a>
                 </div>
 
-                <div class="flex flex-col md:flex-row items-center gap-12 mt-10">
+            </div>
 
-                    <div class="md:w-2/3">
-                        <h3 class="text-3xl font-semibold mb-6">
-                            I'm Harshit Singh and I'm a
-                            <span class="text-brand-red">Java Developer</span>
-                        </h3>
-
-                        <p class="text-lg text-gray-300 leading-relaxed mb-4">
-                            I'm Harshit Singh — a Java developer and 3rd-year Computer Science
-                            engineering student who loves building clean, impactful tech.
-                        </p>
-
-                        <p class="text-lg text-gray-300 leading-relaxed mb-8">
-                            I'm also exploring human values and ethics — aiming to build
-                            software that is reliable and meaningful. 🚀
-                        </p>
-
-                        <div class="flex flex-wrap gap-4">
-                            <a href="https://github.com/0harshitsingh1"
-                               target="_blank"
-                               class="bg-brand-red text-white py-3 px-6 rounded-lg font-semibold hover:bg-brand-red-darker transition">
-                                Visit Github
-                            </a>
-
-                            <a href="https://www.linkedin.com/in/harshit-singh03/"
-                               target="_blank"
-                               class="bg-gray-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-600 transition">
-                                LinkedIn
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="md:w-1/3">
-                        <div class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl mx-auto">
-                            <img src="myphoto.jpeg" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-
+            <!-- RIGHT IMAGE (CIRCLE) -->
+            <div class="md:w-1/2 flex justify-center md:justify-end fade-text" data-aos="zoom-in-down">
+                <div class="w-80 h-80 md:w-[500px] md:h-[500px] lg:w-[550px] lg:h-[550px] rounded-full overflow-hidden shadow-2xl border-4 border-brand-red/30 hover:border-brand-red/50 transition-all duration-300">
+                    <img src="myphoto.jpeg" alt="Harshit Singh" class="w-full h-full object-cover">
                 </div>
             </div>
-        </section>
 
+        </div>
+
+    </div>
+</section>
         <!-- WORK -->
-        <section id="work" class="py-20 md:py-32 bg-gray-900">
+        <section id="work" class="min-h-screen flex items-center py-20 md:py-32 bg-slate-800">
             <div class="container mx-auto px-6">
 
-                <h2 class="text-4xl font-bold text-center mb-4">My Work</h2>
-                <div class="text-center mb-12">
-                    <span class="text-lg text-gray-400">what I did</span>
+                <h2 class="text-4xl font-bold text-center mb-4 reveal">My Work</h2>
+                <div class="text-center mb-12 reveal">
+                    <span class="text-lg text-gray-600">what I did</span>
                     <div class="w-20 h-0.5 bg-brand-red mx-auto mt-2"></div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 reveal">
 
-                    <a href="https://github.com/0harshitsingh1"
-                       target="_blank"
-                       class="block bg-gray-800 p-10 rounded-lg text-center group hover:scale-105 transition shadow-xl">
+                    <a href="https://github.com/0harshitsingh1" target="_blank"
+                        class="block bg-gray-800 p-10 rounded-lg text-center group hover:scale-105 transition shadow-xl">
 
                         <i class="fab fa-github text-7xl mb-6 text-brand-red group-hover:scale-110 transition"></i>
                         <h3 class="text-3xl font-semibold mb-2">My GitHub</h3>
                         <p class="text-lg text-gray-400 group-hover:text-white">click me</p>
                     </a>
 
-                    <a href="https://leetcode.com/0harshitsingh1/"
-                       target="_blank"
-                       class="block bg-gray-800 p-10 rounded-lg text-center group hover:scale-105 transition shadow-xl">
+                    <a href="https://leetcode.com/0harshitsingh1/" target="_blank"
+                        class="block bg-gray-800 p-10 rounded-lg text-center group hover:scale-105 transition shadow-xl">
 
-                        <svg class="mx-auto mb-6 group-hover:scale-110 transition"
-                             width="90" height="90" viewBox="0 0 24 24" fill="none">
+                        <svg class="mx-auto mb-6 group-hover:scale-110 transition" width="90" height="90"
+                            viewBox="0 0 24 24" fill="none">
                             <path d="M9.46 3.04L7.75 4.75L12.97 10L7.75 15.25L9.46 16.96L16.41 10L9.46 3.04Z"
-                                  fill="#FFA116" />
-                            <path d="M14.83 10.36L12.53 12.66L14.83 15.52"
-                                  stroke="#545454" stroke-width="2"
-                                  stroke-linecap="round" />
-                            <circle cx="17.5" cy="12" r="2.5"
-                                    fill="#FFA116" stroke="#545454" stroke-width="2"/>
+                                fill="#FFA116" />
+                            <path d="M14.83 10.36L12.53 12.66L14.83 15.52" stroke="#545454" stroke-width="2"
+                                stroke-linecap="round" />
+                            <circle cx="17.5" cy="12" r="2.5" fill="#FFA116" stroke="#545454" stroke-width="2" />
                         </svg>
 
                         <h3 class="text-3xl font-semibold mb-2">My LeetCode</h3>
@@ -207,20 +207,21 @@
                     </a>
 
                 </div>
+
             </div>
         </section>
 
         <!-- SKILLS -->
-        <section id="skills" class="py-20 md:py-32 bg-gray-800">
+        <section id="skills" class="min-h-screen flex items-center py-20 md:py-32 bg-zinc-900">
             <div class="container mx-auto px-6">
 
-                <h2 class="text-4xl font-bold text-center mb-4">My Skills</h2>
-                <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-center mb-4 reveal">My Skills</h2>
+                <div class="text-center mb-12 reveal">
                     <span class="text-lg text-gray-400">what I know</span>
                     <div class="w-20 h-0.5 bg-brand-red mx-auto mt-2"></div>
                 </div>
 
-                <div class="flex flex-col md:flex-row gap-12">
+                <div class="flex flex-col md:flex-row gap-12 reveal">
 
                     <div class="md:w-1/2">
                         <h3 class="text-3xl font-semibold mb-6">My creative skills & experiences</h3>
@@ -235,7 +236,7 @@
                         </p>
 
                         <a href="#"
-                           class="bg-brand-red text-white py-3 px-6 rounded-lg text-md font-semibold hover:bg-brand-red-darker transition">
+                            class="bg-brand-red text-white py-3 px-6 rounded-lg text-md font-semibold hover:bg-brand-red-darker transition">
                             Read more
                         </a>
                     </div>
@@ -246,8 +247,8 @@
                             <div class="flex justify-between mb-1">
                                 <span>HTML</span><span>90%</span>
                             </div>
-                            <div class="w-full bg-gray-700 h-3 rounded-full overflow-hidden">
-                                <div class="skill-bar-inner bg-brand-red h-3" style="width: 90%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-inner" style="--target-width: 90%"></div>
                             </div>
                         </div>
 
@@ -255,8 +256,8 @@
                             <div class="flex justify-between mb-1">
                                 <span>CSS</span><span>80%</span>
                             </div>
-                            <div class="w-full bg-gray-700 h-3 rounded-full overflow-hidden">
-                                <div class="skill-bar-inner bg-brand-red h-3" style="width: 80%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-inner" style="--target-width: 80%"></div>
                             </div>
                         </div>
 
@@ -264,8 +265,8 @@
                             <div class="flex justify-between mb-1">
                                 <span>JavaScript</span><span>40%</span>
                             </div>
-                            <div class="w-full bg-gray-700 h-3 rounded-full overflow-hidden">
-                                <div class="skill-bar-inner bg-brand-red h-3" style="width: 40%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-inner" style="--target-width: 40%"></div>
                             </div>
                         </div>
 
@@ -273,8 +274,8 @@
                             <div class="flex justify-between mb-1">
                                 <span>Java</span><span>80%</span>
                             </div>
-                            <div class="w-full bg-gray-700 h-3 rounded-full overflow-hidden">
-                                <div class="skill-bar-inner bg-brand-red h-3" style="width: 80%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-inner" style="--target-width: 80%"></div>
                             </div>
                         </div>
 
@@ -282,8 +283,8 @@
                             <div class="flex justify-between mb-1">
                                 <span>DSA</span><span>50%</span>
                             </div>
-                            <div class="w-full bg-gray-700 h-3 rounded-full overflow-hidden">
-                                <div class="skill-bar-inner bg-brand-red h-3" style="width: 50%"></div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-inner" style="--target-width: 50%"></div>
                             </div>
                         </div>
 
@@ -294,29 +295,27 @@
         </section>
 
         <!-- PROJECTS -->
-        <section id="projects" class="py-20 md:py-32 bg-gray-800">
+        <section id="projects" class="min-h-screen flex items-center py-20 md:py-32 bg-neutral-900">
             <div class="container mx-auto px-6">
 
-                <h2 class="text-4xl font-bold text-center mb-4">Projects</h2>
-                <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-center mb-4 reveal">Projects</h2>
+                <div class="text-center mb-12 reveal">
                     <span class="text-lg text-gray-400">what I've built</span>
                     <div class="w-20 h-0.5 bg-brand-red mx-auto mt-2"></div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 reveal">
 
-                    <a href="https://the-classync.vercel.app/index.html"
-                       target="_blank"
-                       class="block bg-gray-900 p-10 rounded-lg text-center group hover:scale-105 transition shadow-xl">
+                    <a href="https://the-classync.vercel.app/index.html" target="_blank"
+                        class="block bg-gray-900 p-10 rounded-lg text-center group hover:scale-105 transition shadow-xl">
 
                         <i class="fas fa-code text-7xl mb-6 text-brand-red group-hover:scale-110 transition"></i>
                         <h3 class="text-3xl font-semibold mb-2">ClasSync – Student Task Manager</h3>
                         <p class="text-lg text-gray-400 group-hover:text-white">Click to view</p>
                     </a>
 
-                    <a href="https://github.com/0harshitsingh1/Smart-StudyMate-AI"
-                       target="_blank"
-                       class="block bg-gray-900 p-10 rounded-lg text-center group hover:scale-105 transition shadow-xl">
+                    <a href="https://github.com/0harshitsingh1/Smart-StudyMate-AI" target="_blank"
+                        class="block bg-gray-900 p-10 rounded-lg text-center group hover:scale-105 transition shadow-xl">
 
                         <i class="fas fa-code-branch text-7xl mb-6 text-brand-red group-hover:scale-110 transition"></i>
                         <h3 class="text-3xl font-semibold mb-2">
@@ -326,20 +325,21 @@
                     </a>
 
                 </div>
+
             </div>
         </section>
 
         <!-- CONTACT -->
-        <section id="contact" class="py-20 md:py-32 bg-gray-900">
+        <section id="contact" class="min-h-screen flex items-center py-20 md:py-32 bg-stone-900">
             <div class="container mx-auto px-6">
 
-                <h2 class="text-4xl font-bold text-center mb-4">Contact me</h2>
-                <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-center mb-4 reveal">Contact me</h2>
+                <div class="text-center mb-12 reveal">
                     <span class="text-lg text-gray-400">get in touch</span>
                     <div class="w-20 h-0.5 bg-brand-red mx-auto mt-2"></div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 reveal">
 
                     <div>
                         <h3 class="text-3xl font-semibold mb-6">Get in Touch</h3>
@@ -368,8 +368,8 @@
                                     <h4 class="text-xl">Email</h4>
                                     <p>
                                         <a href="mailto:harshitsingh.vtu@gmail.com"
-                                           class="text-gray-300 hover:text-blue-400">
-                                           harshitsingh.vtu@gmail.com
+                                            class="text-gray-300 hover:text-blue-400">
+                                            harshitsingh.vtu@gmail.com
                                         </a>
                                     </p>
                                 </div>
@@ -381,41 +381,40 @@
                     <div>
                         <h3 class="text-3xl font-semibold mb-6">Message me</h3>
 
-                        <form action="https://formspree.io/f/xqankqbr"
-                              method="POST" id="contact-form">
+                    <form action="https://formspree.io/f/xqankqbr" method="POST" id="contact-form">
 
-                            <div class="flex flex-col md:flex-row gap-4 mb-4">
-                                <input type="text" name="name" placeholder="Name" required
-                                       class="w-full md:w-1/2 p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-brand-red">
+                        <div class="flex flex-col md:flex-row gap-4 mb-4">
+                            <input type="text" name="name" placeholder="Name" required
+                                class="w-full md:w-1/2 p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-brand-red">
 
-                                <input type="email" name="email" placeholder="Email" required
-                                       class="w-full md:w-1/2 p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-brand-red">
-                            </div>
+                            <input type="email" name="email" placeholder="Email" required
+                                class="w-full md:w-1/2 p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-brand-red">
+                        </div>
 
-                            <div class="mb-4">
-                                <input type="text" name="subject" placeholder="Subject" required
-                                       class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-brand-red">
-                            </div>
+                        <div class="mb-4">
+                            <input type="text" name="subject" placeholder="Subject" required
+                                class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-brand-red">
+                        </div>
 
-                            <div class="mb-6">
-                                <textarea name="message" rows="6" placeholder="Message.." required
-                                          class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-brand-red"></textarea>
-                            </div>
+                        <div class="mb-6">
+                            <textarea name="message" rows="6" placeholder="Message.." required
+                                class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-brand-red"></textarea>
+                        </div>
 
-                            <button type="submit"
-                                    class="bg-brand-red text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-brand-red-darker transition">
-                                Send
-                            </button>
+                        <button type="submit"
+                            class="bg-brand-red text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-brand-red-darker transition">
+                            Send
+                        </button>
 
-                            <p id="success-message"
-                               class="text-green-400 mt-4 text-lg hidden">
-                                Thanks for your message. I'll get back to you soon.
-                            </p>
+                        <p id="success-message" class="text-green-400 mt-4 text-lg hidden">
+                            Thanks for your message. I'll get back to you soon.
+                        </p>
 
-                        </form>
-                    </div>
+                    </form>
+                </div>
 
                 </div>
+
             </div>
         </section>
 
@@ -428,7 +427,10 @@
         </div>
     </footer>
 
+    <!-- AOS Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 
 </body>
+
 </html>
