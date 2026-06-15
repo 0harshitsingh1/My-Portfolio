@@ -6,20 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harshit Singh </title>
 
-    <!-- FIXED: Tailwind CSS -->
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // If CDN fails, load Tailwind from backup
-        (function () {
-            var script = document.createElement("script");
-            script.src = "https://cdn.tailwindcss.com";
-            script.onerror = function () {
-                console.warn("Tailwind CDN blocked — loading fallback…");
-                document.head.insertAdjacentHTML('beforeend', `
-                <link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-            `);
-            };
-            document.head.appendChild(script);
-        })();
+        // If Play CDN fails to load (e.g., offline or blocked), load fallback stylesheet
+        if (typeof tailwind === 'undefined') {
+            console.warn("Tailwind CDN blocked — loading fallback…");
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = "https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css";
+            document.head.appendChild(link);
+        }
     </script>
 
     <!-- Font Awesome -->
@@ -170,7 +167,7 @@
                     <div class="md:w-1/2 flex justify-center md:justify-end fade-text" data-aos="zoom-in-down">
                         <div
                             class="w-80 h-80 md:w-[500px] md:h-[500px] lg:w-[550px] lg:h-[550px] rounded-full overflow-hidden shadow-2xl border-4 border-brand-red/30 hover:border-brand-red/50 transition-all duration-300">
-                            <img src="me.jpg" alt="Harshit Singh" class="w-full h-full object-cover">
+                            <img src="me.png" alt="Harshit Singh" class="w-full h-full object-cover">
                         </div>
                     </div>
 
@@ -250,9 +247,9 @@
                         </p>
 
                         <!-- <a href="#"
-                            class="bg-brand-red text-white py-3 px-6 rounded-lg text-md font-semibold hover:bg-brand-red-darker transition">
-                            Read more
-                        </a> -->
+                                class="bg-brand-red text-white py-3 px-6 rounded-lg text-md font-semibold hover:bg-brand-red-darker transition">
+                                Read more
+                            </a> -->
                     </div>
 
                     <div class="md:w-1/2 space-y-6">
@@ -338,14 +335,21 @@
                         <p class="text-lg text-gray-400 group-hover:text-white">Click to view</p>
                     </a>
 
-                    <a href="https://github.com/0harshitsingh1/AirBnb_Project" target="_blank"
-                        class="block bg-gray-900 p-10 rounded-lg text-center group hover:scale-105 transition shadow-xl">
+                    <a href="https://github.com/0harshitsingh1/AirBnb_Project" target="_blank" rel="noopener noreferrer"
+                        class="block bg-gray-900 p-10 rounded-lg text-center group hover:scale-105 transition-all duration-300 shadow-xl">
 
-                        <i class="fas fa-code-branch text-7xl mb-6 text-brand-red group-hover:scale-110 transition"></i>
+                        <!-- Airbnb Logo -->
+                        <img src="https://m.media-amazon.com/images/I/51EUXwYJ34L.png" alt="Airbnb Logo"
+                            class="w-24 h-24 mx-auto mb-6 object-contain group-hover:scale-110 transition-transform duration-300" />
+
                         <h3 class="text-3xl font-semibold mb-2">
-                            AirBnb_Project
+                            Airbnb Clone
                         </h3>
-                        <p class="text-lg text-gray-400 group-hover:text-white">Click to view</p>
+
+                        <p class="text-lg text-gray-400 group-hover:text-white transition-colors duration-300">
+                            View Project on GitHub
+                        </p>
+
                     </a>
 
                 </div>
