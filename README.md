@@ -2,17 +2,17 @@
 
 A professional portfolio website showcasing my skills, projects, and experience.
 
-## 📋 Overview
+## Overview
 
 This is a personal portfolio website built with modern web technologies. It serves as a comprehensive showcase of my professional background, technical skills, and completed projects. The site is fully responsive and optimized for all devices.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **HTML** (70.9%) - Semantic markup and page structure
 - **JavaScript** (20.4%) - Interactive features and dynamic functionality
 - **CSS** (8.7%) - Styling and responsive design
 
-## ✨ Features
+## Features
 
 - **Responsive Design** - Mobile-first approach ensuring optimal viewing on all devices
 - **Interactive UI** - Smooth animations and interactive elements
@@ -75,14 +75,14 @@ npx http-server
 
 Then visit `http://localhost:8000` in your browser.
 
-## 📄 Sections Included
+## Sections Included
 
 - **About Me** - Introduction and professional background
 - **Skills** - Technical expertise and competencies
 - **Projects** - Showcase of completed work with descriptions
 - **Contact** - Information for getting in touch
 
-## 🎨 Customization
+## Customization
 
 To customize this portfolio:
 
@@ -92,7 +92,7 @@ To customize this portfolio:
 4. Update contact information
 5. Add new sections as needed
 
-## 📱 Responsive Breakpoints
+## Responsive Breakpoints
 
 - **Desktop** - Full layout on screens 1024px and above
 - **Tablet** - Optimized layout for 768px - 1023px
@@ -105,15 +105,15 @@ To customize this portfolio:
 ## 📧 Contact
 
 Feel free to reach out to me through:
-- Email: [your-email@example.com]
-- LinkedIn: [Your LinkedIn Profile]
+- Email: [harshitsingh.vtu@gmail.com]
+- LinkedIn: [www.linkedin.com/in/harshit-singh03]
 - GitHub: [@0harshitsingh1](https://github.com/0harshitsingh1)
 
-## 📝 License
+## License
 
 This project is open source and available under the MIT License. See the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built with passion and attention to detail
 - Inspired by modern web design practices
